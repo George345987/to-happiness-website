@@ -78,6 +78,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "theme-color", content: "#6D1F2B" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "To Happiness — By May Ramy" },
+      { name: "twitter:title", content: "To Happiness — By May Ramy" },
+      { property: "og:description", content: "A sanctuary for movement, mindfulness and meaningful connection." },
+      { name: "twitter:description", content: "A sanctuary for movement, mindfulness and meaningful connection." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/01bd1ec7-43ed-44a5-b05f-81b747c64cda/id-preview-ba66be6c--57dd9528-b70f-4d86-b69e-451a21f7c297.lovable.app-1778806329793.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/01bd1ec7-43ed-44a5-b05f-81b747c64cda/id-preview-ba66be6c--57dd9528-b70f-4d86-b69e-451a21f7c297.lovable.app-1778806329793.png" },
     ],
     links: [
       {
