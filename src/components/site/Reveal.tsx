@@ -33,6 +33,5 @@ export function Reveal({
     return () => obs.disconnect();
   }, []);
 
-  // @ts-expect-error dynamic tag
-  return <Tag ref={ref} className={`reveal ${className}`} style={{ transitionDelay: `${delay}ms`, ...style }}>{children}</Tag>;
+  return <Tag ref={ref as never} className={`reveal ${className}`} style={{ transitionDelay: `${delay}ms`, ...style }}>{children}</Tag>;
 }
