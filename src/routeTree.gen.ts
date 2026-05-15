@@ -9,7 +9,6 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TeamUpRouteImport } from './routes/team-up'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RetreatsRouteImport } from './routes/retreats'
@@ -17,11 +16,6 @@ import { Route as CorporateWellnessRouteImport } from './routes/corporate-wellne
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
-const TeamUpRoute = TeamUpRouteImport.update({
-  id: '/team-up',
-  path: '/team-up',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const StudioRoute = StudioRouteImport.update({
   id: '/studio',
   path: '/studio',
@@ -60,7 +54,6 @@ export interface FileRoutesByFullPath {
   '/retreats': typeof RetreatsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
-  '/team-up': typeof TeamUpRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -69,7 +62,6 @@ export interface FileRoutesByTo {
   '/retreats': typeof RetreatsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
-  '/team-up': typeof TeamUpRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -79,7 +71,6 @@ export interface FileRoutesById {
   '/retreats': typeof RetreatsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
-  '/team-up': typeof TeamUpRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -90,7 +81,6 @@ export interface FileRouteTypes {
     | '/retreats'
     | '/sitemap.xml'
     | '/studio'
-    | '/team-up'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -99,7 +89,6 @@ export interface FileRouteTypes {
     | '/retreats'
     | '/sitemap.xml'
     | '/studio'
-    | '/team-up'
   id:
     | '__root__'
     | '/'
@@ -108,7 +97,6 @@ export interface FileRouteTypes {
     | '/retreats'
     | '/sitemap.xml'
     | '/studio'
-    | '/team-up'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -118,18 +106,10 @@ export interface RootRouteChildren {
   RetreatsRoute: typeof RetreatsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StudioRoute: typeof StudioRoute
-  TeamUpRoute: typeof TeamUpRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/team-up': {
-      id: '/team-up'
-      path: '/team-up'
-      fullPath: '/team-up'
-      preLoaderRoute: typeof TeamUpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/studio': {
       id: '/studio'
       path: '/studio'
@@ -182,18 +162,7 @@ const rootRouteChildren: RootRouteChildren = {
   RetreatsRoute: RetreatsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   StudioRoute: StudioRoute,
-  TeamUpRoute: TeamUpRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
