@@ -144,7 +144,7 @@ function CorporatePage() {
             <p className="mt-6 max-w-xl mx-auto" style={{ color: "var(--color-cream)", opacity: 0.85 }}>
               Let's design an experience your team will remember.
             </p>
-            <a href="mailto:hello@tohappiness.com" className="btn btn-outline mt-10">Start the conversation</a>
+            <a href="mailto:tohappiness.may@gmail.com" className="btn btn-outline mt-10">Start the conversation</a>
           </Reveal>
         </div>
       </section>

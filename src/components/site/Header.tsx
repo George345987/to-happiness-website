@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
-  { to: "/studio", label: "Studio" },
+  { to: "/studio", label: "Yoga" },
   { to: "/retreats", label: "Retreats" },
   { to: "/corporate-wellness", label: "Corporate Wellness" },
 ] as const;
@@ -113,7 +113,7 @@ export function Header() {
             </Link>
           ))}
           <div className="mt-10 text-xs uppercase tracking-[0.28em]" style={{ color: "var(--color-muted-foreground)" }}>
-            Cairo, Egypt — hello@tohappiness.com
+            Cairo, Egypt — tohappiness.may@gmail.com — +20 102 339 2332
           </div>
         </nav>
       </div>

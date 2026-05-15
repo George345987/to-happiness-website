@@ -6,9 +6,9 @@ import heroStudio from "@/assets/hero-studio.jpg";
 export const Route = createFileRoute("/studio")({
   head: () => ({
     meta: [
-      { title: "Studio — To Happiness | Private Yoga in Cairo" },
+      { title: "Yoga — To Happiness | Private Yoga in Cairo" },
       { name: "description", content: "Private yoga sessions designed for movement, healing and presence. Yoga flow, breathwork, mindful movement and gentle stretch." },
-      { property: "og:title", content: "Studio — To Happiness" },
+      { property: "og:title", content: "Yoga — To Happiness" },
       { property: "og:description", content: "A space to reconnect. Private yoga in Cairo." },
       { property: "og:image", content: heroStudio },
     ],
@@ -39,7 +39,7 @@ function StudioPage() {
         <div className="hero-bg" style={{ backgroundImage: `url(${heroStudio})` }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(58,44,40,0.35) 0%, rgba(58,44,40,0.55) 100%)" }} />
         <div className="relative h-full container-luxe flex flex-col justify-end pb-24" style={{ color: "var(--color-cream)" }}>
-          <Reveal><div className="eyebrow" style={{ color: "var(--color-cream)", opacity: 0.85 }}>The Studio</div></Reveal>
+          <Reveal><div className="eyebrow" style={{ color: "var(--color-cream)", opacity: 0.85 }}>Yoga</div></Reveal>
           <Reveal delay={120}>
             <h1 className="h-display mt-6 max-w-3xl" style={{ color: "var(--color-cream)" }}>A space to reconnect.</h1>
           </Reveal>
@@ -76,36 +76,6 @@ function StudioPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-24" style={{ backgroundColor: "var(--color-sand)" }}>
-        <div className="container-luxe grid md:grid-cols-2 gap-12 items-center">
-          <Reveal>
-            <div className="eyebrow">Pricing</div>
-            <h2 className="h-section mt-4">Simple, considered.</h2>
-            <p className="mt-6 text-[1.02rem]" style={{ color: "var(--color-muted-foreground)" }}>
-              For private and semi-private sessions in Cairo.
-            </p>
-          </Reveal>
-          <Reveal delay={120}>
-            <div className="space-y-px" style={{ backgroundColor: "var(--color-border)" }}>
-              <div className="flex items-baseline justify-between p-8" style={{ backgroundColor: "var(--color-cream)" }}>
-                <div>
-                  <div className="font-display text-2xl">Single Class</div>
-                  <div className="text-sm mt-1" style={{ color: "var(--color-muted-foreground)" }}>Drop-in private session</div>
-                </div>
-                <div className="font-display text-3xl" style={{ color: "var(--color-burgundy)" }}>300<span className="text-sm font-body tracking-[0.2em] ml-2">EGP</span></div>
-              </div>
-              <div className="flex items-baseline justify-between p-8" style={{ backgroundColor: "var(--color-cream)" }}>
-                <div>
-                  <div className="font-display text-2xl">8-Class Package</div>
-                  <div className="text-sm mt-1" style={{ color: "var(--color-muted-foreground)" }}>Best for a sustained practice</div>
-                </div>
-                <div className="font-display text-3xl" style={{ color: "var(--color-burgundy)" }}>2,000<span className="text-sm font-body tracking-[0.2em] ml-2">EGP</span></div>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
 
