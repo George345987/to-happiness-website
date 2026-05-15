@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MapPin } from "lucide-react";
+import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -17,7 +17,7 @@ export function Footer() {
           <ul className="space-y-3 text-[0.95rem]">
             {[
               ["/about", "About Us"],
-              ["/studio", "Studio"],
+              ["/studio", "Yoga"],
               ["/retreats", "Retreats"],
               ["/corporate-wellness", "Corporate Wellness"],
             ].map(([to, label]) => (
@@ -34,7 +34,8 @@ export function Footer() {
           <div className="eyebrow mb-5">Contact</div>
           <ul className="space-y-3 text-[0.95rem]" style={{ color: "var(--color-foreground)" }}>
             <li className="flex items-center gap-3"><MapPin size={16} style={{ color: "var(--color-gold)" }} /> Cairo, Egypt</li>
-            <li className="flex items-center gap-3"><Mail size={16} style={{ color: "var(--color-gold)" }} /> hello@tohappiness.com</li>
+            <li className="flex items-center gap-3"><Mail size={16} style={{ color: "var(--color-gold)" }} /> <a href="mailto:tohappiness.may@gmail.com" className="hover:opacity-70">tohappiness.may@gmail.com</a></li>
+            <li className="flex items-center gap-3"><Phone size={16} style={{ color: "var(--color-gold)" }} /> <a href="tel:+201023392332" className="hover:opacity-70">+20 102 339 2332</a></li>
             <li className="flex items-center gap-3"><Instagram size={16} style={{ color: "var(--color-gold)" }} /> @tohappiness.maramy</li>
           </ul>
         </div>

@@ -49,7 +49,7 @@ function HomePage() {
           <Reveal delay={360}>
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
               <Link to="/retreats" className="btn btn-outline">Explore Retreats</Link>
-              <Link to="/studio" className="btn btn-outline">Discover the Studio</Link>
+              <Link to="/studio" className="btn btn-outline">Discover Yoga</Link>
             </div>
           </Reveal>
         </div>
@@ -80,7 +80,7 @@ function HomePage() {
 
           <div className="grid sm:grid-cols-2 gap-5 md:gap-6">
             {[
-              { img: cardClasses, eyebrow: "Studio", title: "Studio Classes", text: "Move, breathe, reconnect.", to: "/studio" },
+              { img: cardClasses, eyebrow: "Yoga", title: "Yoga Classes", text: "Move, breathe, reconnect.", to: "/studio" },
               { img: cardExperiences, eyebrow: "Curated", title: "Wellness Experiences", text: "Beautifully curated wellbeing moments.", to: "/retreats" },
               { img: cardRetreats, eyebrow: "Escape", title: "Retreats", text: "Escape. Reset. Reconnect.", to: "/retreats" },
               { img: cardCorporate, eyebrow: "Teams", title: "Corporate Wellness", text: "Wellbeing for teams that care.", to: "/corporate-wellness" },
