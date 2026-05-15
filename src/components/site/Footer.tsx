@@ -6,7 +6,7 @@ export function Footer() {
     <footer style={{ backgroundColor: "var(--color-cream)", borderTop: "1px solid var(--color-border)" }}>
       <div className="container-luxe py-20 grid gap-14 md:grid-cols-3">
         <div>
-          <img src="/assets/logo.png" alt="To Happiness" className="h-10 w-auto object-contain object-left" />
+          <img src="/assets/logo.jpeg" alt="To Happiness" className="h-14 w-auto object-contain object-left" />
           <p className="mt-6 max-w-xs text-sm leading-relaxed" style={{ color: "var(--color-muted-foreground)" }}>
             Your journey to happiness starts here. A sanctuary for movement, mindfulness and meaningful connection.
           </p>
@@ -20,7 +20,6 @@ export function Footer() {
               ["/studio", "Studio"],
               ["/retreats", "Retreats"],
               ["/corporate-wellness", "Corporate Wellness"],
-              ["/team-up", "Team Up"],
             ].map(([to, label]) => (
               <li key={to}>
                 <Link to={to} className="transition-opacity hover:opacity-60" style={{ color: "var(--color-burgundy)" }}>

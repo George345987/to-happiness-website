@@ -8,7 +8,6 @@ const NAV = [
   { to: "/studio", label: "Studio" },
   { to: "/retreats", label: "Retreats" },
   { to: "/corporate-wellness", label: "Corporate Wellness" },
-  { to: "/team-up", label: "Team Up" },
 ] as const;
 
 export function Header() {
@@ -17,7 +16,7 @@ export function Header() {
   const location = useLocation();
 
   // Pages with a dark hero start with transparent header
-  const transparentRoutes = ["/", "/about", "/studio", "/retreats", "/corporate-wellness", "/team-up"];
+  const transparentRoutes = ["/", "/about", "/studio", "/retreats", "/corporate-wellness"];
   const startTransparent = transparentRoutes.includes(location.pathname);
 
   useEffect(() => {
@@ -49,12 +48,9 @@ export function Header() {
       <div className="container-luxe flex items-center justify-between" style={{ height: solid ? 76 : 96 }}>
         <Link to="/" className="flex items-center" aria-label="To Happiness — home">
           <img
-            src="/assets/logo.png"
+            src="/assets/logo.jpeg"
             alt="To Happiness by May Ramy"
-            className="h-9 md:h-10 w-auto object-contain transition-all"
-            style={{
-              filter: solid ? "none" : "brightness(0) invert(1)",
-            }}
+            className="h-10 md:h-12 w-auto object-contain transition-all"
           />
         </Link>
 

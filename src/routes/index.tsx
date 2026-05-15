@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "A sanctuary for movement, mindfulness and meaningful connection. Yoga studio, wellness retreats and corporate wellbeing — by May Ramy, Cairo." },
       { property: "og:title", content: "To Happiness — By May Ramy" },
       { property: "og:description", content: "Where movement meets stillness. Curated yoga, retreats and wellness experiences." },
-      { property: "og:image", content: "/assets/logo.png" },
+      { property: "og:image", content: "/assets/logo.jpeg" },
     ],
   }),
   component: HomePage,
